@@ -1,0 +1,21 @@
+
+<html >
+<head>
+  <style>
+body {
+  background-image: linear-gradient(to right, red , yellow);
+}
+</style>
+</head>
+<body>
+  <center><img src="{{.Image}}" alt="{{.Name}}">
+    <p>Name: {{.Name}}</p>
+    <p>Creation Date: {{.CreationDate}}</p>
+    <p>First Album: {{.FirstAlbum}}</p>
+    <p>Members: {{range .Members}}{{.}}, {{end}}</p>
+    <p>Dates and Locations: {{range $key, $values := .DatesLocs}}{{$key}}: {{range $values}}{{.}}, {{end}}{{end}}</p>
+  </center>
+  
+   
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+                 body {
+  background-color: rgb(30, 35, 190);
+  color: white;
+}
+        
+.card {
+  height: 470px;
+  width: 25%;
+  float: right;
+}
+@media (max-width: 800px) {
+  .card {
+    width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
+}
+        .container {
+          padding: 2px 1px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <center><h1>Artists</h1></center>
+   
+        {{range .}}
+        <div class="card" >
+            <a href="{{.Id}}"><img src="{{.Image}}" style="width: 200px; height: 200px;"> </a>
+            <h5>{{.Name}}</h5>
+             
+                
+              
+            
+        </div>
+        {{end}}
+    </div>
+</body>
+</html>
